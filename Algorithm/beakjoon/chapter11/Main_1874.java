@@ -9,7 +9,7 @@ public class Main_1874 {
 		Scanner input = new Scanner(System.in);
 
 		int n = input.nextInt();
-		int big = 0, top = 0, idx = 0, num;
+		int big = 0, top = 0, idx = 0;
 		int stack[] = new int[1000000];
 		String ans[] = new String[100000*2];
 		

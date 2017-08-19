@@ -15,7 +15,7 @@ public class Main_1260 {
 		v = input.nextInt();
 		arr = new int[n+1][n+1];
 		
-		visit = new boolean[n+1];
+		visit = new boolean[n];
 		for(int i=1; i<=m; i++){
 			int a = input.nextInt();
 			int b = input.nextInt();
@@ -144,7 +144,8 @@ public class Main_1260 {
 	
 	public static void dfs3(int value){
 		
-/*		visit[i] = true;
+/*
+		visit[i] = true;
         System.out.print(i+" ");
           
         for(int j=1; j<=n; j++){
@@ -152,8 +153,8 @@ public class Main_1260 {
                 dfs3(j);
             }
         }
-*/        
-       
+*/
+
 		
 		visit[value] = true;
 		System.out.print(value + " ");

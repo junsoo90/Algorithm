@@ -36,7 +36,7 @@ public class Main_1967 {
 		Queue queue = new LinkedList();
 	
 		Node maxNode = new Node(n, 0);
-	    queue.add(maxNode); // �������� ����
+	    queue.add(maxNode);
 	 		
 		while(!queue.isEmpty()){
 			 Node vertex = (Node) queue.poll();

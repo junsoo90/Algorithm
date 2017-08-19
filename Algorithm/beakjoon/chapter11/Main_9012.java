@@ -28,13 +28,13 @@ public class Main_9012 {
 					
 					
 				}
-				// (()))(()
+
 	            else if (str.charAt(j) == ')' && cnt <= 0) 
 	            	cnt--;
 				if(cnt < 0 ){
 					break;
 				}
-				//System.out.println(cnt);
+
 	        }
 			if(cnt == 0)
 				System.out.println("YES");

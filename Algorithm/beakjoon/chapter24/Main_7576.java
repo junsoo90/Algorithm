@@ -9,8 +9,6 @@ public class Main_7576 {
 		int n = input.nextInt();
 		int m = input.nextInt();
 		int arr[][] = new int[n][m];
-		int time = 0;
-		boolean bool;
 		for(int i=0; i<n; i++){
 			for(int j=0; j<m; j++){
 				arr[n][m] = input.nextInt();
