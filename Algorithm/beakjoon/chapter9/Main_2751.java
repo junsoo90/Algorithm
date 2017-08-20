@@ -12,7 +12,7 @@ public class Main_2751 {
         BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(buf.readLine());
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList();
         for(int i=0; i<n; i++){
             list.add(Integer.parseInt(buf.readLine()));
         }
