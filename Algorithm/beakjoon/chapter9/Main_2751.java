@@ -20,5 +20,6 @@ public class Main_2751 {
         Collections.sort(list);
         for(int printlist : list)
             System.out.println(printlist);
+        // 한글테스트
     }
 }
