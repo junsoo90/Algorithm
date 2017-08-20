@@ -2,6 +2,6 @@ package Algorithm.beakjoon;
 
 public class GitTest {
     public static void main(String[] args) {
-        System.out.println("í…ŒìŠ¤íŠ¸5");
+        System.out.println("ÀÌÅ¬¸³½ºÅ×½ºÆ®");
     }
 }
