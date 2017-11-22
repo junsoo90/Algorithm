@@ -47,11 +47,13 @@ public class Heap {
 			if (leftchild >= usedSize)
 				break;
 			else {
-				if (rightchild > usedSize) {
+				if (rightchild >= usedSize) {
 					if (arr[leftchild] < arr[currentindex]) {
 						swap(arr, leftchild, currentindex);
 						currentindex = leftchild;
 					}
+					else
+						break;
 				} 
 				else {
 					if (arr[leftchild] > arr[rightchild]) {
@@ -75,6 +77,45 @@ public class Heap {
 
 	}
 
+
+	public static void deleteHeap() {
+		System.out.println(arr[0]);
+		if (heapsize == 0) 
+			return;
+		
+		int currentindex = 0;
+		int leftchild = 1;
+		int rightchild = 2;
+		
+		heapsize--;
+		swap(arr, 0, heapsize);
+
+		while (true) {
+			int select = 0;
+			if (leftchild >= heapsize)
+				break;
+			else if (rightchild >= heapsize)
+				select = leftchild;
+			else {
+				if (arr[leftchild] > arr[rightchild])
+					select = rightchild;
+				else
+					select = leftchild;
+			}
+			
+			if(arr[select] < arr[currentindex]) {
+				swap(arr, select, currentindex);
+				currentindex = select;
+			}
+			else
+				break;
+			leftchild = currentindex * 2 + 1;
+			rightchild = leftchild + 1;
+
+		}
+	
+	}
+	
 	public void print() {
 		int depth = 0;
 		int position = 0;
