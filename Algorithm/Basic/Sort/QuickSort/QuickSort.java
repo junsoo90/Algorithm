@@ -27,13 +27,10 @@ public class QuickSort {
 			}
 			swap(arr, l, r);
 		}
-		r--;
-		l++;
-
-		if (left < r)
-			quickSort(arr, left, r);
-		if (l < right)
-			quickSort(arr, l, right);
+		if (left < pivot)
+			quickSort(arr, left, r - 1);
+		if (pivot < right)
+			quickSort(arr, l + 1, right);
 
 	}
 
