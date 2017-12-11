@@ -22,8 +22,8 @@ public class MergeSort {
 	}
 
 	public static void merge(int arr[], int l, int mid, int r) {
-		int[] temp = new int[arr.length]; // merge한 배열을 순서대로 넣는다 ( 왼쪽, 오른쪽 배열 모두 넣을수 있는 크기만큼 )
-
+		int[] temp = new int[l+r]; // merge한 배열을 순서대로 넣는다 ( 왼쪽, 오른쪽 배열 모두 넣을수 있는 크기만큼 )
+		
 		int i = l; // 왼쪽 배열 index
 		int j = mid + 1; // 오른쪽 배열 index
 		int k = l; // 정렬할 배열 index

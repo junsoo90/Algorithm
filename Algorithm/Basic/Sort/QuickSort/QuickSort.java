@@ -11,12 +11,41 @@ public class QuickSort {
 	}
 
 	static void quickSort(int arr[], int left, int right) {
+		if (left > right)
+			return;
+
+		int pivot = partition(arr, left, right);
+		quickSort(arr, left, pivot - 1);
+		quickSort(arr, pivot + 1, right);
+
+	}
+
+	static int partition(int arr[], int left, int right) {
+		int l = left;
+		int r = right;
+		int pivot = (left + right) / 2;
+
+		while (true) {
+			if (l >= r)
+				break;
+			while (arr[l] < arr[pivot])
+				l++;
+			while (arr[r] > arr[pivot])
+				r--;
+
+			swap(arr, l, r);
+		}
+
+		return l;
+	}
+
+	static void quickSort2(int arr[], int left, int right) {
 
 		int l = left;
 		int r = right;
 		int pivot = (left + right) / 2;
 
-		while (l < r) {
+		while (true) {
 			while (arr[l] < arr[pivot])
 				l++;
 			while (arr[r] > arr[pivot])
