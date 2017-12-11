@@ -21,30 +21,27 @@ public class MergeSort {
 
 	}
 
-	public static void merge(int arr[], int l, int mid, int r) {
-		int[] temp = new int[l+r]; // merge한 배열을 순서대로 넣는다 ( 왼쪽, 오른쪽 배열 모두 넣을수 있는 크기만큼 )
-		
-		int i = l; // 왼쪽 배열 index
-		int j = mid + 1; // 오른쪽 배열 index
-		int k = l; // 정렬할 배열 index
+	public static void merge(int arr[], int left, int mid, int right) {
+		int temp[] = new int[arr.length];
+		int l = left;
+		int r = mid;
+		int t = left;
 
-		while (i <= mid && j <= r) { // 비교해서 temp에 넣는다
-			if (arr[i] <= arr[j])
-				temp[k++] = arr[i++];
+		while (l < mid && right > r) {
+			if (arr[l] < arr[r])
+				temp[t++] = arr[l++];
 			else
-				temp[k++] = arr[j++];
+				temp[t++] = arr[r++];
 		}
 
-		// 남은 부분 채우기
-		while (i <= mid)
-			temp[k++] = arr[i++];
-		while (j <= r)
-			temp[k++] = arr[j++];
+		while (l < mid)
+			temp[t++] = arr[l++];
+		while (r < right)
+			temp[t++] = arr[r++];
 
-		// 원래 배열에 넣기
+		for (int i = left; i < right; i++)
+			arr[i] = temp[i];
 
-		for (int t = l; t <= r; t++) {
-			arr[t] = temp[t];
-		}
 	}
+
 }
