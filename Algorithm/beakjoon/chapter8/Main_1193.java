@@ -20,13 +20,10 @@ public class Main {
 		dif = sum + 1 - input;
 
 		if (level % 2 == 0) {
-
 			System.out.println((level + 1 - dif) + "/" + dif);
-
 		}
 
 		else {
-
 			System.out.println(dif + "/" + (level + 1 - dif));
 		}
 	}
